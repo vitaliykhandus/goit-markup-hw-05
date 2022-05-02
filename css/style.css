@@ -406,6 +406,10 @@ body {
 
 .masters-soc-icon {
   fill: #afb1b8;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .masters-soc-link:hover,
@@ -614,7 +618,7 @@ body {
   cursor: pointer;
   border-radius: 4px;
 
-  transition-property: box-shadow, background-color;
+  transition-property: box-shadow, background-color, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -656,7 +660,9 @@ body {
   display: flex;
   margin-right: 30px;
   margin-bottom: 30px;
+}
 
+.link-img {
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -753,11 +759,15 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  transition-property: opacity, visibility;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
 }
 
 .backdrop.is-hidden .modal {
